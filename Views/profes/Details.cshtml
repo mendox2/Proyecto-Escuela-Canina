@@ -1,0 +1,42 @@
+﻿@model Proyecto_Escuela_canina.Models.profes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>profes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_profe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_profe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_profe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_profe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_profe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_profe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cod_profe }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

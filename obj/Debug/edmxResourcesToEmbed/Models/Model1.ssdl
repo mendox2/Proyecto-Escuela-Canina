@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="escuela_caninaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="matricula">
+    <Key>
+      <PropertyRef Name="cod_mat" />
+    </Key>
+    <Property Name="cod_mat" Type="int" Nullable="false" />
+    <Property Name="num_peluditos_mat" Type="int" />
+    <Property Name="razon_ingreso_mat" Type="varchar" MaxLength="80" />
+    <Property Name="extras_mat" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="papis">
+    <Key>
+      <PropertyRef Name="tel_pap" />
+    </Key>
+    <Property Name="tel_pap" Type="int" Nullable="false" />
+    <Property Name="nom_pap" Type="varchar" MaxLength="70" />
+    <Property Name="fch_ingreso_pap" Type="datetime" />
+  </EntityType>
+  <EntityType Name="peludos">
+    <Key>
+      <PropertyRef Name="cod_pel" />
+    </Key>
+    <Property Name="cod_pel" Type="int" Nullable="false" />
+    <Property Name="nom_pel" Type="varchar" MaxLength="25" />
+    <Property Name="tipo_trato_pel" Type="varchar" MaxLength="60" />
+    <Property Name="raza_pel" Type="varchar" MaxLength="30" />
+    <Property Name="tel_pap" Type="int" />
+  </EntityType>
+  <EntityType Name="profes">
+    <Key>
+      <PropertyRef Name="cod_profe" />
+    </Key>
+    <Property Name="cod_profe" Type="int" Nullable="false" />
+    <Property Name="nom_profe" Type="varchar" MaxLength="70" />
+    <Property Name="tipo_profe" Type="varchar" MaxLength="30" />
+    <Property Name="tel_profe" Type="int" />
+  </EntityType>
+  <EntityContainer Name="escuela_caninaModelStoreContainer">
+    <EntitySet Name="matricula" EntityType="Self.matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="papis" EntityType="Self.papis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="peludos" EntityType="Self.peludos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profes" EntityType="Self.profes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

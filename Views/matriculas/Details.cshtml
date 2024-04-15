@@ -1,0 +1,42 @@
+﻿@model Proyecto_Escuela_canina.Models.matricula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>matricula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.num_peluditos_mat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_peluditos_mat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.razon_ingreso_mat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razon_ingreso_mat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extras_mat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extras_mat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cod_mat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

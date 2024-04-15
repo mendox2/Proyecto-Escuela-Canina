@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="escuela_caninaModelStoreContainer" CdmEntityContainer="escuela_caninaEntities">
+    <EntitySetMapping Name="matricula">
+      <EntityTypeMapping TypeName="escuela_caninaModel.matricula">
+        <MappingFragment StoreEntitySet="matricula">
+          <ScalarProperty Name="cod_mat" ColumnName="cod_mat" />
+          <ScalarProperty Name="num_peluditos_mat" ColumnName="num_peluditos_mat" />
+          <ScalarProperty Name="razon_ingreso_mat" ColumnName="razon_ingreso_mat" />
+          <ScalarProperty Name="extras_mat" ColumnName="extras_mat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="papis">
+      <EntityTypeMapping TypeName="escuela_caninaModel.papis">
+        <MappingFragment StoreEntitySet="papis">
+          <ScalarProperty Name="tel_pap" ColumnName="tel_pap" />
+          <ScalarProperty Name="nom_pap" ColumnName="nom_pap" />
+          <ScalarProperty Name="fch_ingreso_pap" ColumnName="fch_ingreso_pap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="peludos">
+      <EntityTypeMapping TypeName="escuela_caninaModel.peludos">
+        <MappingFragment StoreEntitySet="peludos">
+          <ScalarProperty Name="cod_pel" ColumnName="cod_pel" />
+          <ScalarProperty Name="nom_pel" ColumnName="nom_pel" />
+          <ScalarProperty Name="tipo_trato_pel" ColumnName="tipo_trato_pel" />
+          <ScalarProperty Name="raza_pel" ColumnName="raza_pel" />
+          <ScalarProperty Name="tel_pap" ColumnName="tel_pap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profes">
+      <EntityTypeMapping TypeName="escuela_caninaModel.profes">
+        <MappingFragment StoreEntitySet="profes">
+          <ScalarProperty Name="cod_profe" ColumnName="cod_profe" />
+          <ScalarProperty Name="nom_profe" ColumnName="nom_profe" />
+          <ScalarProperty Name="tipo_profe" ColumnName="tipo_profe" />
+          <ScalarProperty Name="tel_profe" ColumnName="tel_profe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

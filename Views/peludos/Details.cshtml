@@ -1,0 +1,50 @@
+﻿@model Proyecto_Escuela_canina.Models.peludos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>peludos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_trato_pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_trato_pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.raza_pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raza_pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_pap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_pap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cod_pel }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

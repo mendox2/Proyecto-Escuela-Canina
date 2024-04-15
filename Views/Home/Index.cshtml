@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="letras" aria-current="page" href="">@Html.ActionLink("inicio","index","Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="letras">@Html.ActionLink("Matriculas", "index", "matriculas")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="letras">@Html.ActionLink("Papás", "index", "papis")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="letras">@Html.ActionLink("Peluditos", "index", "peludos")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="letras">@Html.ActionLink("Profes", "index", "profes")</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1>Escuela canina Family dogs</h1>
+    <main>
+        <div class="contenido">
+            <div class="div1">
+                <h2>¿Quienes somos?</h2>
+                <p>Somos un espacio dispuesto para nuestros peluditos ofreciendo multiples productos tales como todo tipo de comida, juguetes, collares, comederos, correas, ropa entre otros y servicios de spa, estilistas, paseadores, entrenadores ,etc....</p>
+                <p>En definitiva un espacio ideado para todos nuestros peluditos y sus padres, no somos una escuela que adoctrina, somos las personas y el espacio que crea perros felices para familias felices</p>
+            </div>
+            <br>
+            <div class="div2">
+                <h2>¿Que espacios tenemos disponibles para ustedes?</h2>
+                <p>Estamos ubicados en el centro comercial los Molinos y en el centro comercial Santa fé, tambien contamos con un espacio especial el cual es una finca en el retiro a una hora de Medellín, puedes acercarte a nuestras tiendas fisicas o escribirnos por nuestro Whatsapp como adquirir estos servicios ya que contamos con mil paquetes, opciones y medios de pago para poder darte la mejor atención y formacion para tu peludito.</p>
+            </div>
+            <br>
+            <div class="div5">
+                <h2>Nuestros felices estudiantes: </h2>
+                <div class="grid-container">
+                    <div class="grid-caja caja3">
+                        <img class="bernes" src="~/imagenes/bernes.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja4">
+                        <img class="bull" src="~/imagenes/bull terrier.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja5">
+                        <img class="cockeles" src="~/imagenes/cockel es.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja6">
+                        <img class="dalmata" src="~/imagenes/dalmata.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja7">
+                        <img class="galgo" src="~/imagenes/galgo.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja8">
+                        <img class="labradoodle" src="~/imagenes/labradoodle.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja9">
+                        <img class="pastora" src="~/imagenes/pastor a.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja10">
+                        <img class="teckel" src="~/imagenes/teckel.jpg" alt="">
+                    </div>
+                    <div class="grid-caja caja11">
+                        <img class="yorkie" src="~/imagenes/yorkie.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/mendozza_26/?next=%2F">Instagram</a></li>
+                <li><a href="https://www.facebook.com/sebas.mendoza.35513/">Facebook</a></li>
+                <li><a href="https://wa.link/ba8pfm">Whatsapp</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: lightgreen;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            background-color: forestgreen;
+            width: 100%;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-flex;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            width: 100px;
+        }
+
+        nav li:hover {
+            background-color: lightgreen;
+        }
+
+        .contenido {
+            margin: 60px;
+        }
+
+        .div1 {
+            width: 70%;
+            border-right: 3px;
+        }
+
+        .div2 {
+            width: 70%;
+            border-right: 3px;
+        }
+
+        .letras {
+            color: white;
+        }
+        .grid-caja {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightblue;
+            border-radius: 4px;
+            transition: transform 0.3s ease-in-out;
+            border: solid 1px rgb(255,  255,  255)
+        }
+        .grid-caja:hover:hover {
+            filter: opacity(0.9);
+            transform:  scale(1.04)
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: minmax(200px, auto);
+            gap: 20px;
+            padding:  20px;
+        }
+        .caja1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border-radius:  21px;
+        }
+        .caja2 {
+            grid-column-start: 5;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end:  3;
+        }
+        .caja3 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end:  4;
+        }
+        .caja4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end:  3;
+        }
+        .caja5 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end:  4;
+        }
+        .caja6 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end:  4;
+        }
+        .caja9 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end:  4;
+        }
+        .bernes{
+            height: 100%;
+            width: 100%;
+        }
+
+        .bull{
+            height: 100%;
+            width: 100%;
+        }
+
+        .cockeles{
+            height: 100%;
+            width: 100%;
+        }
+
+        .dalmata{
+            height: 100%;
+            width: 100%;
+        }
+
+        .galgo{
+            height: 100%;
+            width: 100%;
+        }
+
+        .labradoodle{
+            height: 100%;
+            width: 100%;
+        }
+
+        .pastora{
+            height: 100%;
+            width: 100%;
+        }
+
+        .teckel{
+            height: 100%;
+            width: 100%;
+        }
+
+        .yorkie{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</body>
+</html>

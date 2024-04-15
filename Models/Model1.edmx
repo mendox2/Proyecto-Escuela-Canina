@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="escuela_caninaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="matricula">
+          <Key>
+            <PropertyRef Name="cod_mat" />
+          </Key>
+          <Property Name="cod_mat" Type="int" Nullable="false" />
+          <Property Name="num_peluditos_mat" Type="int" />
+          <Property Name="razon_ingreso_mat" Type="varchar" MaxLength="80" />
+          <Property Name="extras_mat" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="papis">
+          <Key>
+            <PropertyRef Name="tel_pap" />
+          </Key>
+          <Property Name="tel_pap" Type="int" Nullable="false" />
+          <Property Name="nom_pap" Type="varchar" MaxLength="70" />
+          <Property Name="fch_ingreso_pap" Type="datetime" />
+        </EntityType>
+        <EntityType Name="peludos">
+          <Key>
+            <PropertyRef Name="cod_pel" />
+          </Key>
+          <Property Name="cod_pel" Type="int" Nullable="false" />
+          <Property Name="nom_pel" Type="varchar" MaxLength="25" />
+          <Property Name="tipo_trato_pel" Type="varchar" MaxLength="60" />
+          <Property Name="raza_pel" Type="varchar" MaxLength="30" />
+          <Property Name="tel_pap" Type="int" />
+        </EntityType>
+        <EntityType Name="profes">
+          <Key>
+            <PropertyRef Name="cod_profe" />
+          </Key>
+          <Property Name="cod_profe" Type="int" Nullable="false" />
+          <Property Name="nom_profe" Type="varchar" MaxLength="70" />
+          <Property Name="tipo_profe" Type="varchar" MaxLength="30" />
+          <Property Name="tel_profe" Type="int" />
+        </EntityType>
+        <EntityContainer Name="escuela_caninaModelStoreContainer">
+          <EntitySet Name="matricula" EntityType="Self.matricula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="papis" EntityType="Self.papis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="peludos" EntityType="Self.peludos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profes" EntityType="Self.profes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="escuela_caninaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="matricula">
+          <Key>
+            <PropertyRef Name="cod_mat" />
+          </Key>
+          <Property Name="cod_mat" Type="Int32" Nullable="false" />
+          <Property Name="num_peluditos_mat" Type="Int32" />
+          <Property Name="razon_ingreso_mat" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="extras_mat" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="papis">
+          <Key>
+            <PropertyRef Name="tel_pap" />
+          </Key>
+          <Property Name="tel_pap" Type="Int32" Nullable="false" />
+          <Property Name="nom_pap" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="fch_ingreso_pap" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="peludos">
+          <Key>
+            <PropertyRef Name="cod_pel" />
+          </Key>
+          <Property Name="cod_pel" Type="Int32" Nullable="false" />
+          <Property Name="nom_pel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_trato_pel" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="raza_pel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tel_pap" Type="Int32" />
+        </EntityType>
+        <EntityType Name="profes">
+          <Key>
+            <PropertyRef Name="cod_profe" />
+          </Key>
+          <Property Name="cod_profe" Type="Int32" Nullable="false" />
+          <Property Name="nom_profe" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_profe" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tel_profe" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="escuela_caninaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="matricula" EntityType="Self.matricula" />
+          <EntitySet Name="papis" EntityType="Self.papis" />
+          <EntitySet Name="peludos" EntityType="Self.peludos" />
+          <EntitySet Name="profes" EntityType="Self.profes" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="escuela_caninaModelStoreContainer" CdmEntityContainer="escuela_caninaEntities">
+          <EntitySetMapping Name="matricula">
+            <EntityTypeMapping TypeName="escuela_caninaModel.matricula">
+              <MappingFragment StoreEntitySet="matricula">
+                <ScalarProperty Name="cod_mat" ColumnName="cod_mat" />
+                <ScalarProperty Name="num_peluditos_mat" ColumnName="num_peluditos_mat" />
+                <ScalarProperty Name="razon_ingreso_mat" ColumnName="razon_ingreso_mat" />
+                <ScalarProperty Name="extras_mat" ColumnName="extras_mat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="papis">
+            <EntityTypeMapping TypeName="escuela_caninaModel.papis">
+              <MappingFragment StoreEntitySet="papis">
+                <ScalarProperty Name="tel_pap" ColumnName="tel_pap" />
+                <ScalarProperty Name="nom_pap" ColumnName="nom_pap" />
+                <ScalarProperty Name="fch_ingreso_pap" ColumnName="fch_ingreso_pap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="peludos">
+            <EntityTypeMapping TypeName="escuela_caninaModel.peludos">
+              <MappingFragment StoreEntitySet="peludos">
+                <ScalarProperty Name="cod_pel" ColumnName="cod_pel" />
+                <ScalarProperty Name="nom_pel" ColumnName="nom_pel" />
+                <ScalarProperty Name="tipo_trato_pel" ColumnName="tipo_trato_pel" />
+                <ScalarProperty Name="raza_pel" ColumnName="raza_pel" />
+                <ScalarProperty Name="tel_pap" ColumnName="tel_pap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profes">
+            <EntityTypeMapping TypeName="escuela_caninaModel.profes">
+              <MappingFragment StoreEntitySet="profes">
+                <ScalarProperty Name="cod_profe" ColumnName="cod_profe" />
+                <ScalarProperty Name="nom_profe" ColumnName="nom_profe" />
+                <ScalarProperty Name="tipo_profe" ColumnName="tipo_profe" />
+                <ScalarProperty Name="tel_profe" ColumnName="tel_profe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

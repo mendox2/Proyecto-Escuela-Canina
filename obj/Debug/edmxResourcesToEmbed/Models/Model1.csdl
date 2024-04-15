@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="escuela_caninaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="matricula">
+    <Key>
+      <PropertyRef Name="cod_mat" />
+    </Key>
+    <Property Name="cod_mat" Type="Int32" Nullable="false" />
+    <Property Name="num_peluditos_mat" Type="Int32" />
+    <Property Name="razon_ingreso_mat" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="extras_mat" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="papis">
+    <Key>
+      <PropertyRef Name="tel_pap" />
+    </Key>
+    <Property Name="tel_pap" Type="Int32" Nullable="false" />
+    <Property Name="nom_pap" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="fch_ingreso_pap" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="peludos">
+    <Key>
+      <PropertyRef Name="cod_pel" />
+    </Key>
+    <Property Name="cod_pel" Type="Int32" Nullable="false" />
+    <Property Name="nom_pel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_trato_pel" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="raza_pel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="tel_pap" Type="Int32" />
+  </EntityType>
+  <EntityType Name="profes">
+    <Key>
+      <PropertyRef Name="cod_profe" />
+    </Key>
+    <Property Name="cod_profe" Type="Int32" Nullable="false" />
+    <Property Name="nom_profe" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_profe" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="tel_profe" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="escuela_caninaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="matricula" EntityType="Self.matricula" />
+    <EntitySet Name="papis" EntityType="Self.papis" />
+    <EntitySet Name="peludos" EntityType="Self.peludos" />
+    <EntitySet Name="profes" EntityType="Self.profes" />
+  </EntityContainer>
+</Schema>
